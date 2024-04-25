@@ -1,9 +1,11 @@
-import MapComponent from "./Map";
-
+import MapComponent from "./components/map/Map";
 
 function App() {
   return (
-    <div> <MapComponent/> </div>
+    <div>
+      {" "}
+      <MapComponent />{" "}
+    </div>
   );
 }
 

@@ -13,7 +13,7 @@
  */
 
 import { useEffect, useRef } from "react";
-import { FaSearchPlus, FaSearchMinus } from "react-icons/fa";
+import { FaSearchPlus, FaSearchMinus, FaGripHorizontal } from "react-icons/fa";
 import { BiPolygon } from "react-icons/bi";
 import { PiLineSegmentFill } from "react-icons/pi";
 import { Draw, Modify } from "ol/interaction.js";
@@ -31,7 +31,7 @@ import { Stroke, Style } from "ol/style";
 import CircleStyle from "ol/style/Circle";
 import { easeOut } from "ol/easing.js";
 
-import { FloatingButton } from "./components/buttons/FloatingButton";
+import { FloatingButton } from "../button/FloatingButton";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import {
   labelStyle,
@@ -40,8 +40,8 @@ import {
   segmentStyle,
   style,
   tipStyle,
-} from "./components/constants/marker-styles";
-import { formatArea, formatLength } from "./utils/formatMap";
+} from "../data/MarkerStyle";
+import { formatArea, formatLength } from "../../utils/format/formatMap";
 
 /**
  * Initializes a map component with an OpenStreetMap layer and a default view.
@@ -101,7 +101,7 @@ const MapComponent = () => {
     return () => {
       map.setTarget(undefined);
     };
-  }, []);
+  });
 
   /**
    * Handles zooming in or out of the map.
@@ -256,6 +256,9 @@ const MapComponent = () => {
     <div className="relative w-screen h-screen ">
       <div ref={mapRef} className="w-full h-full"></div>
       <div className="absolute right-0 top-1/2 -translate-y-1/2 gap-2">
+        <FloatingButton>
+          <FaGripHorizontal />
+        </FloatingButton>
         <FloatingButton onClick={() => handleZoom(mapInstance, +2)}>
           <FaSearchPlus />
         </FloatingButton>
