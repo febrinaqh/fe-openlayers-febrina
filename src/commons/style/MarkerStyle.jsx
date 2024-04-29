@@ -7,7 +7,7 @@
  * OR DISCLOSED TO THIRD PARTIES WITHOUT PRIOR WRITTEN AUTHORIZATION BY
  * PT LEN INDUSTRI (PERSERO), AS APPLICABLE.
  *
- * Created Date: Sunday, March 24nd 2024, 10:46:45 am
+ * Created Date: Monday, March 29nd 2024, 09:07:45 am
  * Author: Febrina Qoonitah | febrina231@gmail.com <https://github.com/febrinaqh>
  *
  */
@@ -130,13 +130,13 @@ const segmentStyle = new Style({
 });
 
 const iconStyle = {
-    "fill-color": "rgba(255, 255, 255, 0.2)",
-    "stroke-color": "#ffcc33",
-    "stroke-width": 2,
-    "circle-radius": 9,
-    "icon-src": "/semangat.jpg",
-    "icon-width": 40,
-    "icon-height": 40,
-  };
+  "fill-color": "rgba(255, 255, 255, 0.2)",
+  "stroke-color": "#ffcc33",
+  "stroke-width": 2,
+  "circle-radius": 9,
+  "icon-src": "/emoticon.jpg",
+  "icon-width": 40,
+  "icon-height": 40,
+};
 
 export { segmentStyle, modifyStyle, tipStyle, labelStyle, style, iconStyle };

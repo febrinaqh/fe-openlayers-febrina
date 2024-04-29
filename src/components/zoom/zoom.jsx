@@ -7,17 +7,22 @@
  * OR DISCLOSED TO THIRD PARTIES WITHOUT PRIOR WRITTEN AUTHORIZATION BY
  * PT LEN INDUSTRI (PERSERO), AS APPLICABLE.
  *
- * Created Date: Sunday, March 24nd 2024, 10:46:45 am
+ * Created Date: Monday, March 29nd 2024, 09:07:45 am
  * Author: Febrina Qoonitah | febrina231@gmail.com <https://github.com/febrinaqh>
  *
  */
 
-export const FloatingButton = ({ children, onClick }) => {
-  return (
-    <div onClick={onClick} className=" mr-3 ">
-      <button className="p-2 bg-slate-800 text-white rounded-md mb-2">
-        {children}
-      </button>
-    </div>
-  );
+/**
+ * Handles zooming in or out of the map.
+ * @param {React.MutableRefObject<Map>} mapRef - Reference to the map instance.
+ * @param {number} value - Zoom level adjustment.
+ */
+
+const handleZoom = (mapRef, value) => {
+  const map = mapRef.current;
+  const view = map.getView();
+  const zoom = view.getZoom();
+  view.animate({ zoom: zoom + value, duration: 500 });
 };
+
+export default handleZoom;
